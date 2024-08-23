@@ -1,0 +1,47 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(void){
+  int TamL=3, TamC=3;
+  int Matriz[TamL][TamC];
+  int l, c;
+  
+  
+  // cada linha se transforma em coluna 
+  // linha 1 vira coluna 1, linha 2 vira coluna 2.... 
+ 
+   //laço de repetição usado para armazenar os valores na matriz 
+    for(l=0; l<3; l++){ 
+         for(c=0; c<3; c++){
+           printf("Informe um numero inteiros para a coluna %d e linha %d:", l+1, c+1);
+           scanf("%d" , &Matriz[l][c]);
+         }
+       }
+
+      system("clear"); // limpa a tela 
+  
+            printf("\nMatriz original\n");
+
+  // laço de repetição usado para criar a matriz original 3X3      
+    for(l=0; l<TamL; l++){// primeiro for é usado para preencher a linha da matriz  
+              for(c=0; c<TamC; c++){ //o segundo for é usado para preencher a coluna da matriz
+                printf("%3d", Matriz[l][c]);
+                printf("  ");
+              }
+              printf("\n");
+            }
+
+        printf("  ");
+        
+  printf("\nMatriz trasporta\n");
+  
+  // laço de repetição usado para criar a matriz trasporta 3X3
+  for(l=0; l<TamC; l++){ // esse for é usado para trocar as linhas por colunas da matriz original 
+          for(c=0; c<TamL; c++){ 
+            printf("%3d", Matriz[c][l]);
+            printf("  ");
+          }
+          printf("\n");
+        }  
+    }
+
